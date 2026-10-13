@@ -3,313 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Corner - Coding</title>
+    <title>Study Corner - Coding Hub</title>
     <!-- Tab Icon -->
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <!-- 1. Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- 2. Link Main Stylesheet (styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-        /* Modern, Clean Design for Study Corner */
-        :root {
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --accent: #3b82f6;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 0;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
-
-        header .header-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        header nav {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        header nav a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        header nav a:hover {
-            color: var(--primary);
-        }
-
-        /* Main Container */
-        main {
-            max-width: 800px;
-            margin: 2.5rem auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Hero / Intro */
+        /* Study Corner Subject Specific Styles */
         .intro-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        h1 {
-            font-size: 2.25rem;
-            color: var(--text-main);
-            margin-bottom: 1rem;
-        }
-
-        .intro-card p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
         }
 
         .subject-image {
             width: 100%;
             height: auto;
-            max-height: 380px;
+            max-height: 400px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: var(--radius-md);
             display: block;
             margin: 1.5rem 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            box-shadow: var(--shadow-md);
         }
 
-        /* Sections */
-        section {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.75rem 2rem;
-            margin-bottom: 1.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        .study-section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
         }
 
-        h2 {
+        .study-section h2 {
             font-size: 1.5rem;
             color: var(--primary);
             margin-bottom: 1rem;
-            border-bottom: 2px solid #eff6ff;
+            border-bottom: 2px solid var(--primary-bg);
             padding-bottom: 0.5rem;
         }
 
-        ul, ol {
+        .study-section ul, 
+        .study-section ol {
             padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        li {
-            margin-bottom: 0.6rem;
-            color: var(--text-main);
+        .study-section li {
+            margin-bottom: 0.65rem;
+            color: var(--text-secondary);
         }
 
-        dl {
+        .study-section dl {
             display: grid;
-            gap: 1rem;
+            gap: 1.25rem;
         }
 
-        dt {
+        .study-section dt {
             font-weight: 700;
-            color: var(--text-main);
-            font-size: 1.05rem;
+            color: var(--text-primary);
+            font-size: 1.1rem;
         }
 
-        dd {
+        .study-section dd {
             margin-left: 1rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
         }
 
-        /* Links styling */
         .links-group {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        a.button-link {
-            display: inline-block;
-            background-color: var(--primary);
-            color: #ffffff;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.2s ease;
-        }
-
-        a.button-link:hover {
-            background-color: var(--primary-hover);
-        }
-
-        a.secondary-link {
-            display: inline-block;
-            background-color: #f1f5f9;
-            color: var(--text-main);
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            border: 1px solid var(--border-color);
-            transition: background-color 0.2s ease;
-        }
-
-        a.secondary-link:hover {
-            background-color: #e2e8f0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-            padding: 2rem 1.5rem;
-            text-align: center;
-            color: var(--text-muted);
-            margin-top: 3rem;
-        }
-
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        footer p {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
+            margin-top: 1.25rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- ================= Header Section ================= -->
-    <header id="top">
-        <a href="index.html" class="header-brand">
-            <img src="images/logo.svg" alt="Study Corner Logo" width="40" height="40">
-            <span>Study Corner</span>
+    <!-- ==================== HEADER & NAVBAR (INLINE DISPLAY) ==================== -->
+    <header class="navbar" id="top">
+        <a href="index.html" class="brand" title="Go to Home">
+            <img class="brand-logo" src="images/logo.svg" alt="Study Corner Logo" width="38" height="38">
+            <span class="brand-name">AI Student <span class="brand-highlight">Assistant</span></span>
         </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="planner.html">Planner</a>
-            <a href="assistant.html">Assistant</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="study-corner.html" class="nav-link active">Study Corner</a>
+            <a href="assistant.html" class="nav-link">Assistant</a>
+            <a href="planner.html" class="nav-link">Planner</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="index.html#features" class="nav-cta-btn">All Features</a>
         </nav>
     </header>
 
-    <!-- ================= Main Content ================= -->
-    <main>
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main style="max-width: 900px; margin: 3rem auto; padding: 0 1.5rem;">
+        
         <!-- Introduction Section -->
-        <section class="intro-card" id="introduction">
-            <h1>Coding</h1>
+        <article class="intro-card" id="introduction">
+            <span class="badge badge-primary" style="margin-bottom: 1rem;">Core Track</span>
+            <h1 class="section-title">Coding &amp; Software Development</h1>
             <p>
-                Computer programming is an <b>essential</b> skill for creating innovative digital tools and solving complex problems.<br>
-                It allows creators to develop <i>creative</i> solutions that transform everyday ideas into real-world applications.
+                Computer programming is an <b>essential</b> skill for creating innovative digital tools, interactive websites, and solving complex real-world problems.<br>
+                It empowers creators to develop <i>creative</i> solutions and turn everyday ideas into powerful interactive applications.
             </p>
-            <!-- Bonus: A second image of their own saved in images/ with proper alt -->
+            
+            <!-- Subject Image -->
             <img src="images/coding-workspace.jpg" alt="A laptop on a desk showing computer programming code" width="600" height="350" class="subject-image">
             
             <!-- Quick navigation links -->
             <div class="links-group">
-                <a href="#how-i-study" class="secondary-link">Jump to "How I study it"</a>
+                <a href="#how-i-study" class="btn btn-secondary btn-sm">Jump to "How I study it" ↓</a>
+                <a href="index.html#portfolio" class="btn btn-primary btn-sm">View Related Projects →</a>
             </div>
-        </section>
+        </article>
 
-        <!-- Bonus: Section 1 - Why I like it -->
-        <section id="why-i-like-it">
+        <!-- Section 1 - Why I like it -->
+        <section class="study-section" id="why-i-like-it">
             <h2>Why I like it</h2>
             <ul>
                 <li>Building functional projects and web applications from scratch provides immense creative satisfaction.</li>
                 <li>It continuously exercises logical problem-solving and critical thinking skills with every challenge.</li>
-                <li>The developer community is welcoming, active, and offers endless resources to learn from.</li>
+                <li>The developer community is welcoming, active, and offers endless open-source resources to learn from.</li>
             </ul>
         </section>
 
-        <!-- Bonus: Section 2 - How I study it (Target of internal jump link) -->
-        <section id="how-i-study">
+        <!-- Section 2 - How I study it -->
+        <section class="study-section" id="how-i-study">
             <h2>How I study it</h2>
             <ol>
                 <li>Read official documentation and follow structured interactive tutorials daily.</li>
-                <li>Write code hands-on by creating mini projects and experimenting with new algorithms.</li>
+                <li>Write code hands-on by creating mini projects, styling with CSS, and experimenting with new layouts.</li>
                 <li>Inspect and debug errors carefully using browser developer tools and console logs.</li>
             </ol>
         </section>
 
-        <!-- Bonus: Section 3 - Words to know -->
-        <section id="words-to-know">
+        <!-- Section 3 - Words to know -->
+        <section class="study-section" id="words-to-know">
             <h2>Words to know</h2>
             <dl>
                 <dt>Algorithm</dt>
                 <dd>A defined, step-by-step set of instructions or computational rules designed to solve a problem or complete a task.</dd>
                 <dt>Variable</dt>
                 <dd>A named storage container in a program that holds a data value which can be referenced and modified during execution.</dd>
+                <dt>Cascading Style Sheets (CSS)</dt>
+                <dd>A stylesheet language used for describing the presentation, layout, and styling of a document written in HTML.</dd>
             </dl>
         </section>
 
         <!-- Helpful Resources Section with External Link -->
-        <section id="resources">
+        <section class="study-section" id="resources">
             <h2>Helpful Resources</h2>
             <p>Explore more background information about this subject:</p>
             <div class="links-group">
-                <!-- External Link with https:// and title attribute -->
-                <a href="https://en.wikipedia.org/wiki/Computer_programming" target="_blank" rel="noopener noreferrer" title="Learn more about Computer Programming on Wikipedia" class="button-link">Read about Coding on Wikipedia</a>
-                <!-- Internal link to How I study it -->
-                <a href="#how-i-study" class="secondary-link">Go to How I study it</a>
+                <a href="https://en.wikipedia.org/wiki/Computer_programming" target="_blank" rel="noopener noreferrer" title="Learn more about Computer Programming on Wikipedia" class="btn btn-primary btn-sm">Read about Coding on Wikipedia ↗</a>
+                <a href="#top" class="btn btn-secondary btn-sm">Back to Top ↑</a>
             </div>
         </section>
     </main>
 
-    <!-- ================= Footer Section ================= -->
-    <footer>
-        <p><a href="#top">Back to top</a></p>
-        <p>&copy; 2026 Study Corner. All rights reserved.</p>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>AI Student Assistant • Study Corner • Powered by Google Fonts (Roboto) &amp; CSS3</p>
+                <p><a href="#top" style="color: var(--accent);">Back to top ↑</a></p>
+            </div>
+        </div>
     </footer>
 
 </body>
 </html>
-

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio - AI & Web Development</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <!-- 1. Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- 2. Link Main Stylesheet (styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== HEADER & NAVBAR (INLINE DISPLAY) ==================== -->
+    <header class="navbar" id="top">
+        <a href="index.html" class="brand" title="Go to Home">
+            <img class="brand-logo" src="images/logo.svg" alt="Study Corner Logo" width="38" height="38">
+            <span class="brand-name">AI Student <span class="brand-highlight">Assistant</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="study-corner.html" class="nav-link">Study Corner</a>
+            <a href="assistant.html" class="nav-link">Assistant</a>
+            <a href="planner.html" class="nav-link">Planner</a>
+            <a href="portfolio.html" class="nav-link active">Portfolio</a>
+            <a href="index.html#features" class="nav-cta-btn">All Features</a>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- Portfolio Hero -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-badge-wrap">
+                    <span class="badge badge-primary">👨‍💻 Junior Web &amp; AI Developer</span>
+                </div>
+                <h1 class="hero-title">
+                    Creative <span class="hero-highlight">Portfolio Showcase</span>
+                </h1>
+                <p class="hero-description">
+                    Exploring modern frontend web development, semantic markup, responsive CSS architectures, and AI-assisted workflows.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Browse Projects ↓</a>
+                    <a href="assistant.html" class="btn btn-secondary">Open AI Assistant →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="section" id="skills">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-accent">Core Competencies</span></div>
+                <h2 class="section-title">Technical Skills &amp; Stack</h2>
+                <p class="section-subtitle">Key tools, technologies, and methodologies practiced throughout the course.</p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card">
+                    <span class="feature-icon">🌐</span>
+                    <h3 class="feature-title">HTML5 Semantics</h3>
+                    <p>Clean, accessible document architectures using header, nav, section, article, main, and footer elements.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3 class="feature-title">Modern CSS3</h3>
+                    <p>Inline navigation, Flexbox, CSS Grid, custom properties, Google Fonts (Roboto), and smooth micro-interactions.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3 class="feature-title">Responsive Design</h3>
+                    <p>Fluid mobile-first layouts, adaptive viewports, flexible media queries, and responsive card systems.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <h3 class="feature-title">AI &amp; Automation</h3>
+                    <p>Prompt engineering, integrating intelligent study workflows, and generative prototyping.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="section section-alt" id="projects">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-success">Completed Checkpoints</span></div>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world applications built during the bootcamp curriculum.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <div class="portfolio-card-icon">📚</div>
+                        <span class="badge badge-primary">Checkpoint 1 &amp; 2</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <h3 class="portfolio-card-title">AI Student Assistant</h3>
+                        <p class="portfolio-card-desc">
+                            A multi-page web platform featuring interactive study helpers, lecture summarizers, and an intelligent query assistant.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">HTML5</span>
+                            <span class="portfolio-tag">styles.css</span>
+                            <span class="portfolio-tag">Roboto Font</span>
+                            <span class="portfolio-tag">Inline Navbar</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span class="portfolio-link">Live Project</span>
+                        <a href="index.html" class="btn btn-secondary btn-sm">View Home →</a>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <div class="portfolio-card-icon">⚡</div>
+                        <span class="badge badge-accent">Featured Hub</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <h3 class="portfolio-card-title">Study Corner - Coding Track</h3>
+                        <p class="portfolio-card-desc">
+                            Focused curriculum dashboard with structured learning methodologies, vocabulary definitions, and curated external resources.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Clean Typography</span>
+                            <span class="portfolio-tag">Responsive Cards</span>
+                            <span class="portfolio-tag">Semantic Tags</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span class="portfolio-link">Live Project</span>
+                        <a href="study-corner.html" class="btn btn-secondary btn-sm">View Hub →</a>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <div class="portfolio-card-icon">📅</div>
+                        <span class="badge badge-success">Tool</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <h3 class="portfolio-card-title">Study Planner &amp; Tracker</h3>
+                        <p class="portfolio-card-desc">
+                            Structured tabular timetable and habit tracker to organize daily study blocks and track bootcamp assignment deadlines.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">CSS Tables</span>
+                            <span class="portfolio-tag">Badges</span>
+                            <span class="portfolio-tag">Productivity</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span class="portfolio-link">Live Project</span>
+                        <a href="planner.html" class="btn btn-secondary btn-sm">View Planner →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>AI Student Assistant • Developer Portfolio • Powered by Roboto &amp; CSS3</p>
+                <p><a href="#top" style="color: var(--accent);">Back to top ↑</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+

@@ -3,27 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planner - Study Corner</title>
+    <title>Study Planner - AI Assistant</title>
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- 1. Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- 2. Link styles.css External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- ==================== HEADER & NAVBAR (INLINE DISPLAY) ==================== -->
     <header class="navbar" id="top">
-        <a href="index.html" class="brand">
-            <img src="images/logo.svg" alt="Study Corner Logo" width="40" height="40">
-            Study Corner
+        <a href="index.html" class="brand" title="Go to Home">
+            <img class="brand-logo" src="images/logo.svg" alt="Study Corner Logo" width="38" height="38">
+            <span class="brand-name">AI Student <span class="brand-highlight">Assistant</span></span>
         </a>
-        <nav class="nav-link">
-            <a href="index.html">Home</a>
-            <a href="study-corner.html">Study Corner</a>
-            <a href="planner.html">Planner</a>
-            <a href="assistant.html">Assistant</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="study-corner.html" class="nav-link">Study Corner</a>
+            <a href="assistant.html" class="nav-link">Assistant</a>
+            <a href="planner.html" class="nav-link active">Planner</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="index.html#features" class="nav-cta-btn">All Features</a>
         </nav>
     </header>
-    <main class="section">
-        <h1 class="section-title">Study Planner</h1>
-        <p style="text-align: center;">Plan your daily study sessions and track your learning milestones.</p>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <section class="section">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-success">Productivity Tool</span></div>
+                <h1 class="section-title">Weekly Study Planner</h1>
+                <p class="section-subtitle">Plan your daily study sessions, track assignments, and achieve your learning milestones.</p>
+            </div>
+
+            <div class="planner-card">
+                <table class="planner-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Subject / Topic</th>
+                            <th>Focus Area</th>
+                            <th>Allocated Time</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Monday</strong></td>
+                            <td>Web Development</td>
+                            <td>HTML Semantics &amp; Document Structure</td>
+                            <td>2 Hours</td>
+                            <td><span class="badge badge-success">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tuesday</strong></td>
+                            <td>CSS Fundamentals</td>
+                            <td>Inline Navbar &amp; Typography (Roboto)</td>
+                            <td>2.5 Hours</td>
+                            <td><span class="badge badge-primary">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wednesday</strong></td>
+                            <td>Layout Systems</td>
+                            <td>Flexbox &amp; CSS Grid Responsive Design</td>
+                            <td>2 Hours</td>
+                            <td><span class="badge badge-accent">Scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thursday</strong></td>
+                            <td>Portfolio Project</td>
+                            <td>Building Cards, Showcases &amp; Themes</td>
+                            <td>3 Hours</td>
+                            <td><span class="badge badge-accent">Scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Friday</strong></td>
+                            <td>AI Concepts</td>
+                            <td>Prompt Engineering &amp; LLM Foundations</td>
+                            <td>1.5 Hours</td>
+                            <td><span class="badge badge-accent">Scheduled</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Weekly Targets Summary -->
+            <div class="features-grid" style="max-width: 960px; margin: 2.5rem auto 0;">
+                <article class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3 class="feature-title">Weekly Target</h3>
+                    <p>Complete 11 hours of hands-on coding and finalize the CSS Portfolio checkpoint.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3 class="feature-title">Productivity Streak</h3>
+                    <p>5 consecutive days logged. Keep up the high study momentum!</p>
+                </article>
+            </div>
+        </section>
     </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>AI Student Assistant • Powered by Google Fonts (Roboto) &amp; CSS3</p>
+                <p><a href="#top" style="color: var(--accent);">Back to top ↑</a></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
-

@@ -3,109 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Student Assistant</title>
+    <title>AI Student Assistant & Portfolio</title>
     <link rel="icon" href="starter-assets/images/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
-    <header class="navbar" id="top">
-        <a href="https://gomycode.com/tn/fr" class="brand" title="Go to the home page" target="_top">
-            <img class="brand-logo" src="starter-assets/images/logo.svg" alt="AI Student Assistant" height="40" width="40">
-            AI Student Assistant
-        </a>
-        <nav class="nav-link">
-            <a href="index.html" target="_blank">Home</a>
-            <a href="assistant.html" target="_blank">Assistant</a>
-            <a href="planner.html" target="_blank">Planner</a>
-            <a href="#features">See Features</a>
-        </nav>
-    </header>
+
+    <!-- 1. Import Roboto Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- 2. Link styles.css External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="section" id="how-it-works">
-        <h2 class="section-title">How it works</h2>
-        <ol type="I">
-            <li>Choose a subject</li>
-            <li>type</li>
-            <li>diff</li>
-        </ol>
-        <ul>
-            <li>generic</li>
-            <li>text</li>
-            <li>list</li>
-        </ul>
-        <section>
-            <h2 class=""section-title">AI words to know</h2>
-            <dl class="glossary">
-                <dt>Model</dt>
-                <dd>A program that I learned</dd>
-            </dl>
-        </section>
-    </section>
-    <!--What assistant can do-->
-    <section class="section" id="features">
-        <h2 class="section-title">What it can do?</h2>
-        <div class="feature-list">
-            <article class="feature-card">
-                <h3 class="feature-title">Explain any topic</h3>
-                <p>Get simple explanations of hard lessons, step by step</p>
-                <p id="price">Price: <del>$ 20 per month</del> <b>5 $</b> for Bootcamp students</p>
-            </article>
-            <article class="feature-card">
-                <h3 class="feature-title">Summarize study notes</h3>
-                <p>Turn long chapters and lectures into clear, key takeaways</p>
-            </article>
-            <article class="feature-card">
-                <h3 class="feature-title">Create practice quizzes</h3>
-                <p>Generate instant flashcards and test questions to prepare for exams</p>
-            </article>
-        </div>
-    </section>
-    <!--Main Content WebPage-->
-    <main>
-        <section id="description" class="description">
-            <h2>About AI Student Assistant</h2>
-            <p>AI Student Assistant is a smart companion designed to help students organize study schedules, answer academic queries, summarize notes, and enhance daily learning productivity.</p>
-        </section>
-        <section class="hero">
-            <h1 class="hero-title">Study Smarter with AI</h1>
-            <h2>test</h2>
-            <h3>block</h3>
-        </section>
-        <section class="hero">
-            <h1 class="hero-title">Study Smarter with AI</h1>
-            <p class="hero-description">Ask questions. Get clear answers. <br> You week in minute</p>
-        </section>
-        <section class="features">
-            <h2 class="features-heading">Key Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Smart Summaries</h3>
-                    <p>Turn lengthy lectures, textbooks, and notes into concise, easy-to-digest study summaries in seconds.</p>
+
+    <!-- ==================== HEADER & NAVBAR (INLINE DISPLAY) ==================== -->
+    <header class="navbar" id="top">
+        <a href="index.html" class="brand" title="Go to Home">
+            <img class="brand-logo" src="starter-assets/images/logo.svg" alt="AI Student Assistant Logo" width="38" height="38">
+            <span class="brand-name">AI Student <span class="brand-highlight">Assistant</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="study-corner.html" class="nav-link">Study Corner</a>
+            <a href="assistant.html" class="nav-link">Assistant</a>
+            <a href="planner.html" class="nav-link">Planner</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="#how-it-works" class="nav-cta-btn">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-badge-wrap">
+                <span class="badge badge-primary">✨ Next-Gen Learning Companion</span>
+            </div>
+            <h1 class="hero-title">
+                Study Smarter with <span class="hero-highlight">AI Intelligence</span>
+            </h1>
+            <p class="hero-description">
+                Ask questions, synthesize study notes, plan exam schedules, and build your digital portfolio in minutes. Powered by modern web technologies.
+            </p>
+            <div class="hero-actions">
+                <a href="assistant.html" class="btn btn-primary">Try AI Assistant →</a>
+                <a href="#portfolio" class="btn btn-secondary">Explore Portfolio</a>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric-item">
+                    <span class="metric-number">98%</span>
+                    <span class="metric-label">Retention Rate</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Instant Q&amp;A Tutor</h3>
-                    <p>Ask questions anytime and receive clear, step-by-step solutions to solve difficult academic problems.</p>
+                <div class="metric-item">
+                    <span class="metric-number">40+ hrs</span>
+                    <span class="metric-label">Saved Every Month</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📅</div>
-                    <h3>Study Schedule Planner</h3>
-                    <p>Keep track of assignment deadlines, exams, and daily study sessions with an organized routine.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Quiz &amp; Flashcard Generator</h3>
-                    <p>Practice efficiently by generating personalized quizzes and flashcards tailored to your syllabus.</p>
+                <div class="metric-item">
+                    <span class="metric-number">5k+</span>
+                    <span class="metric-label">Practice Flashcards</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <!-- ABOUT / DESCRIPTION SECTION -->
+        <section class="section" id="description">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-accent">Overview</span></div>
+                <h2 class="section-title">About AI Student Assistant</h2>
+                <p class="section-subtitle">
+                    AI Student Assistant is an intelligent companion designed to help students organize study schedules, answer academic queries, summarize complex lectures, and boost daily productivity.
+                </p>
+            </div>
         </section>
-        <footer>
-            <p>
-            Made by the AI Development Bootcapmmp students.
-                <br>Built with HTML and CSS
-                <small>for learning purpose only</small>
-        </p>
-        </footer>
+
+        <!-- HOW IT WORKS SECTION -->
+        <section class="section section-alt" id="how-it-works">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-primary">Simple Workflow</span></div>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Achieve your academic goals in three straightforward steps.</p>
+            </div>
+
+            <div class="steps-container">
+                <article class="step-card">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Choose Your Subject</h3>
+                    <p class="step-text">Select your topic of focus—from Computer Science and AI to Mathematics or History.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Input Notes & Questions</h3>
+                    <p class="step-text">Paste textbook paragraphs, lecture slides, or type specific questions for instant guidance.</p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Master the Concepts</h3>
+                    <p class="step-text">Receive structured breakdowns, flashcards, practice quizzes, and custom study plans.</p>
+                </article>
+            </div>
+
+            <!-- Learning Checklist -->
+            <ol class="custom-step-list">
+                <li>Choose a subject</li>
+                <li>Type your topic & queries</li>
+                <li>Review AI explanations & diffs</li>
+            </ol>
+            <ul class="custom-check-list">
+                <li>Automated study summaries</li>
+                <li>Contextual lecture notes</li>
+                <li>Instant quiz generation</li>
+            </ul>
+        </section>
+
+        <!-- WHAT IT CAN DO / FEATURES SECTION -->
+        <section class="section" id="features">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-success">Powerful Capabilities</span></div>
+                <h2 class="section-title">What It Can Do</h2>
+                <p class="section-subtitle">Comprehensive tools crafted to simplify every stage of your learning journey.</p>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card">
+                    <span class="feature-icon">💡</span>
+                    <h3 class="feature-title">Explain Any Topic</h3>
+                    <p>Get intuitive, step-by-step explanations of difficult concepts with real-world examples and diagrams.</p>
+                    <div class="feature-price">
+                        Price: <del>$20 / mo</del> <b>$5</b> for Bootcamp Students
+                    </div>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">📚</span>
+                    <h3 class="feature-title">Summarize Study Notes</h3>
+                    <p>Convert long textbooks, chapters, and academic papers into crystal-clear key takeaways in seconds.</p>
+                    <div class="feature-price">
+                        Status: <b>Included</b> with Free Account
+                    </div>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3 class="feature-title">Create Practice Quizzes</h3>
+                    <p>Generate interactive flashcards and customized test questions to test retention and ace exams.</p>
+                    <div class="feature-price">
+                        Status: <b>Unlimited</b> Self-Paced Quizzes
+                    </div>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">📅</span>
+                    <h3 class="feature-title">Study Schedule Planner</h3>
+                    <p>Never miss a deadline again. Organize daily revisions, project milestones, and exam targets with ease.</p>
+                    <div class="feature-price">
+                        Status: <b>Synchronized</b> Calendar Alerts
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==================== CREATIVE PORTFOLIO SHOWCASE ==================== -->
+        <!-- Inspired by modern developer & student portfolio models -->
+        <section class="section section-alt" id="portfolio">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-primary">Showcase & Work</span></div>
+                <h2 class="section-title">Student Portfolio Models</h2>
+                <p class="section-subtitle">
+                    Featured web projects built during the AI & Web Development Bootcamp. Demonstrating semantic HTML, CSS layout mastery, and creative design.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <div class="portfolio-card-icon">🚀</div>
+                        <span class="badge badge-primary">Active</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <h3 class="portfolio-card-title">AI Student Assistant</h3>
+                        <p class="portfolio-card-desc">
+                            A smart academic copilot with interactive study modules, an AI tutor interface, and schedule planner.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">HTML5</span>
+                            <span class="portfolio-tag">CSS3 (Roboto)</span>
+                            <span class="portfolio-tag">Flexbox</span>
+                            <span class="portfolio-tag">Responsive</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span class="portfolio-link">Featured Project</span>
+                        <a href="assistant.html" class="btn btn-secondary btn-sm">Open Demo →</a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <div class="portfolio-card-icon">💻</div>
+                        <span class="badge badge-accent">Interactive</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <h3 class="portfolio-card-title">Study Corner Hub</h3>
+                        <p class="portfolio-card-desc">
+                            Dedicated programming learning dashboard with curated study methods, coding resources, and subject deep-dives.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Clean UI</span>
+                            <span class="portfolio-tag">Inline Navbar</span>
+                            <span class="portfolio-tag">Semantic HTML</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span class="portfolio-link">Study Hub</span>
+                        <a href="study-corner.html" class="btn btn-secondary btn-sm">Explore Hub →</a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="portfolio-card">
+                    <div class="portfolio-card-header">
+                        <div class="portfolio-card-icon">📆</div>
+                        <span class="badge badge-success">Productivity</span>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <h3 class="portfolio-card-title">Academic Schedule Planner</h3>
+                        <p class="portfolio-card-desc">
+                            Time management and milestone tracking system designed for bootcamp students to maintain daily progress.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">CSS Grid</span>
+                            <span class="portfolio-tag">Data Tables</span>
+                            <span class="portfolio-tag">Badges</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card-footer">
+                        <span class="portfolio-link">Planner App</span>
+                        <a href="planner.html" class="btn btn-secondary btn-sm">View Planner →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- AI GLOSSARY SECTION -->
+        <section class="section" id="glossary">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-accent">Knowledge Base</span></div>
+                <h2 class="section-title">AI Words to Know</h2>
+                <p class="section-subtitle">Fundamental terms and concepts every tech student should master.</p>
+            </div>
+
+            <div class="glossary-grid">
+                <article class="glossary-card">
+                    <h3 class="glossary-term">Model</h3>
+                    <p class="glossary-def">A mathematical program trained on extensive datasets to recognize patterns, make predictions, and generate solutions.</p>
+                </article>
+                <article class="glossary-card">
+                    <h3 class="glossary-term">Prompt Engineering</h3>
+                    <p class="glossary-def">The art of crafting clear, structured instructions to guide artificial intelligence models toward optimal outputs.</p>
+                </article>
+                <article class="glossary-card">
+                    <h3 class="glossary-term">Algorithm</h3>
+                    <p class="glossary-def">A finite sequence of well-defined computer instructions used to solve computational problems or perform automated tasks.</p>
+                </article>
+                <article class="glossary-card">
+                    <h3 class="glossary-term">Semantic HTML</h3>
+                    <p class="glossary-def">The practice of using HTML tags that convey the meaning of the content, enhancing accessibility and SEO.</p>
+                </article>
+            </div>
+        </section>
     </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-brand">AI Student Assistant</h3>
+                    <p class="footer-tagline">
+                        Empowering students and creators to study smarter, organize effectively, and showcase projects with confidence.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="study-corner.html">Study Corner</a></li>
+                        <li><a href="assistant.html">AI Assistant</a></li>
+                        <li><a href="planner.html">Schedule Planner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Key Features</a></li>
+                        <li><a href="#portfolio">Portfolio Models</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#top">Back to Top ↑</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made by the AI Development Bootcamp students • Built with HTML5 &amp; CSS3</p>
+                <p><small>For learning and portfolio purposes only &copy; 2026</small></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

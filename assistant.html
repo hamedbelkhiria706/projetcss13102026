@@ -3,27 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistant - Study Corner</title>
+    <title>AI Assistant - Study Corner</title>
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- 1. Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- 2. Link styles.css External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- ==================== HEADER & NAVBAR (INLINE DISPLAY) ==================== -->
     <header class="navbar" id="top">
-        <a href="index.html" class="brand">
-            <img src="images/logo.svg" alt="Study Corner Logo" width="40" height="40">
-            Study Corner
+        <a href="index.html" class="brand" title="Go to Home">
+            <img class="brand-logo" src="images/logo.svg" alt="Study Corner Logo" width="38" height="38">
+            <span class="brand-name">AI Student <span class="brand-highlight">Assistant</span></span>
         </a>
-        <nav class="nav-link">
-            <a href="index.html">Home</a>
-            <a href="study-corner.html">Study Corner</a>
-            <a href="planner.html">Planner</a>
-            <a href="assistant.html">Assistant</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="study-corner.html" class="nav-link">Study Corner</a>
+            <a href="assistant.html" class="nav-link active">Assistant</a>
+            <a href="planner.html" class="nav-link">Planner</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="index.html#features" class="nav-cta-btn">All Features</a>
         </nav>
     </header>
-    <main class="section">
-        <h1 class="section-title">AI Study Assistant</h1>
-        <p style="text-align: center;">Ask your AI assistant questions to get quick explanations and study tips.</p>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        <section class="section">
+            <div class="section-header">
+                <div class="section-tag"><span class="badge badge-primary">Interactive Tutor</span></div>
+                <h1 class="section-title">AI Study Assistant</h1>
+                <p class="section-subtitle">Ask questions to receive instant explanations, code reviews, and customized study summaries.</p>
+            </div>
+
+            <!-- Chat Interface Mockup -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div>
+                        <strong>Nova AI Tutor</strong>
+                        <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: 0.5rem;">v2.4</span>
+                    </div>
+                    <span class="chat-status">Online & Ready</span>
+                </div>
+
+                <div class="chat-messages">
+                    <div class="chat-bubble chat-bubble-assistant">
+                        👋 <strong>Hello! I'm your AI Study Assistant.</strong>
+                        <p style="margin: 0.5rem 0 0; color: inherit;">
+                            What would you like to review today? I can explain hard lessons, create flashcards, or help with HTML and CSS styling.
+                        </p>
+                    </div>
+
+                    <div class="chat-bubble chat-bubble-user">
+                        Can you explain how to make the navbar display inline in CSS?
+                    </div>
+
+                    <div class="chat-bubble chat-bubble-assistant">
+                        Certainly! In CSS, you can make the navbar items display inline by setting:
+                        <ul style="margin: 0.5rem 0 0.5rem 1.25rem; font-size: 0.9rem;">
+                            <li><code>display: inline-block;</code> or <code>display: inline;</code> on your navigation links or list items.</li>
+                            <li>Or using modern flexbox: <code>display: flex;</code> / <code>inline-flex;</code> on the navbar container!</li>
+                        </ul>
+                        This aligns all your menu items horizontally in a clean row!
+                    </div>
+                </div>
+
+                <form class="chat-input-area" onsubmit="event.preventDefault();">
+                    <input type="text" class="chat-input" placeholder="Type your academic question or prompt here..." aria-label="Question input">
+                    <button type="submit" class="btn btn-primary">Send Prompt</button>
+                </form>
+            </div>
+
+            <!-- Quick Suggestions -->
+            <div style="max-width: 800px; margin: 1.5rem auto; text-align: center;">
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">Sample study questions to try:</p>
+                <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                    <span class="badge badge-accent" style="cursor: pointer;">Explain CSS Grid vs Flexbox</span>
+                    <span class="badge badge-primary" style="cursor: pointer;">Create 5 Quiz Questions for HTML</span>
+                    <span class="badge badge-success" style="cursor: pointer;">Summarize CSS Box Model</span>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>AI Student Assistant • Powered by Google Fonts (Roboto) &amp; CSS3</p>
+                <p><a href="#top" style="color: var(--accent);">Back to top ↑</a></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
-
